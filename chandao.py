@@ -25,7 +25,7 @@ import pygal
 
 
 ## 1、请求刺激战场整体数据
-response = requests.get("http://zentao.cbsd.com.cn:8445/zentao/company-dynamic.html")
+response = requests.get("")
 print(response.text)
 #
 #requests.check_compatibility.__ab
