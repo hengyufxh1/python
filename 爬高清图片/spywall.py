@@ -63,12 +63,9 @@ def down_load(file_url, file_path, now_wallpaper_count, all_wapaper_count):
 #                    构建输出
                     done_block = int((data_count/content_size)* 50)
                     data_count = data_count+ len(data)
-                    
 #                    当前的下载百分比
                     now_percentage = (data_count/content_size)* 100
-                    
-                    print("\r %s:[%s%s] %d%% %d、%d" % (file_path, done_block* '@' , '' * (50-1-done_block),now_percentage,now_wallpaper_count, all_wapaper_count), end=' ')
-                    
+                    print("\r %s:[%s%s] %d%% %d/%d" % (file_path, done_block* '@' , '' * (50-1-done_block),now_percentage,now_wallpaper_count, all_wapaper_count), end=' ')
 #        下载完成之后 获取图片格式[扩展名]
     file_type = guess(file_path)
     try:
@@ -173,7 +170,7 @@ if __name__ == "__main__":
 #        
 #    开始爬取超轻壁纸
         print("正在下载超轻壁纸.请稍等...")
-        now_wallpaper_count = spider_wallpaper(int(3), int(1))
+        now_wallpaper_count = spider_wallpaper(int(1), int(1))
 #        if wall_paper_count == now_wallpaper_count:
 #            print("\n 下载超轻壁纸成功")
 #            break
